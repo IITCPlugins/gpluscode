@@ -6,6 +6,6 @@
   "author": "McBen",
   "entry": "src/Main.ts",
   "minimize": false,
-  "changelog": "",
+  "changelog": "changelog.md",
   "fileversion": "1.10.1"
 }
