@@ -1,0 +1,11 @@
+{
+  "name": "IITC plugin: GPlusCodes",
+  "id": "iitc_plugin_GPlusCodes",
+  "category": "Info",
+  "description": "Resolve Google Plus codes",
+  "author": "McBen",
+  "entry": "src/Main.ts",
+  "minimize": false,
+  "changelog": "",
+  "fileversion": "1.10.1"
+}
