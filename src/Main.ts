@@ -4,7 +4,7 @@ import OpenLocationCode from "open-location-code-typescript";
 
 const URI = "https://plus.codes/";
 
-class GPlusCodes implements Plugin.Class {
+class PlusCodes implements Plugin.Class {
 
     init() {
         window.addHook("search", this.onSearch)
@@ -15,7 +15,7 @@ class GPlusCodes implements Plugin.Class {
         if (OpenLocationCode.isFull(term)) {
             const result = OpenLocationCode.decode(term);
             search.addResult({
-                title: `GPlusCode: ${term}`,
+                title: `PlusCode: ${term}`,
                 description: `Lat: ${result.latitudeCenter.toFixed(6)}, Lng: ${result.longitudeCenter.toFixed(6)}`,
                 position: {
                     lat: result.latitudeCenter,
@@ -49,7 +49,7 @@ class GPlusCodes implements Plugin.Class {
                 const fullcode = OpenLocationCode.recoverNearest(code, parseFloat(cityLocation.lat), parseFloat(cityLocation.lon));
                 const result = OpenLocationCode.decode(fullcode);
                 search.addResult({
-                    title: `GPlusCode: ${term}`,
+                    title: `PlusCode: ${term}`,
                     description: `Lat: ${result.latitudeCenter.toFixed(6)}, Lng: ${result.longitudeCenter.toFixed(6)}`,
                     position: {
                         lat: result.latitudeCenter,
@@ -67,7 +67,7 @@ class GPlusCodes implements Plugin.Class {
 
 /**
  * use "main" to access you main class from everywhere
- * (same as window.plugin.GPlusCodes)
+ * (same as window.plugin.PlusCodes)
  */
-export const main = new GPlusCodes();
-Plugin.Register(main, "GPlusCodes");
+export const main = new PlusCodes();
+Plugin.Register(main, "PlusCodes");
